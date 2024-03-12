@@ -1,51 +1,109 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Elian小站</title>
-    <link rel="icon"  href="7362.ico"> 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <style>
       body {
-        margin: 0;
-      }
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+}
+header {
+  height: 70px;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  justify-content: center;
+}
+section {
+  background-color: rgb(197, 237, 250);
+}
+footer {
+  background-color: rgb(255, 255, 255);
+  height: 60px;
+}
+img {
+  border-radius: 30px;
+}
+/* * {
+  border: 1px solid black;
+} */
+.flex {
+  display: flex;
+}
+.flex1 {
+  flex: 1;
+}
+.ct{
+  justify-content: center;
+  align-items: center;
+}
+.column{
+  flex-direction: column;}
+  p{text-align: center;}
     </style>
   </head>
   <body>
-    <div style="background: #d3d3d3; text-align: center; padding: 15px">
-      <strong>@欢迎来到Elian的小站！！！</strong>
-    </div>
-    <div style="background-color: #e0ffff; text-align: center; padding: 30px">
-      <img src="0721.jpg" alt="black and white" width="300" height="200" />
-    </div>
-    <div
-      style="
-        background: #d3d3d3;
-        text-align: center;
-        max-width: 800px;
-        margin: 30px auto;
-        padding: 15px;
-        line-height: 1.5;
-      "
-    >
-      <p>你好，我是本站作者</p>
-      <p>这是我的第一个静态网页</p>
-      <p>欢迎访问!!!</p>
-      <p>欢迎访问!!!</p>
-      <p>欢迎访问!!!</p>
-      <p></p>
-      <p></p>
-    </div>
-    <div
-      style="
-        background-color: #e0ffff;
-        text-align: center;
-        padding: 30px;
-        font-size: 12px;
-      "
-    >
-      <p>MY WEBSITE</p>
-      <a href="https://www.runoob.com/">友情链接.菜鸟html</a>
-    </div>
+    <script>
+      function dz() {
+        let element = window.document.getElementById("dz");
+        let text = parseInt(element.innerText);
+        let sum = text + 1;
+        element.innerText = sum;
+      }
+    </script>
+    <header class="flex">
+      <div class="flex ct">
+        <img
+          style="margin: 3px 5px 3px 25px"
+          src="0721.jpg"
+          alt="0721"
+          width="60px"
+          height="40px"
+        />
+        <div style="margin-right: 25px; font-size: 20px">项城凯</div>
+      </div>
+    </header>
+
+    <section style="border-top: 3px solid black;border-bottom: 3px solid black" class="column flex flex1">
+      <div style="text-align: center">
+        【置顶】首先感谢帅哥康文昌，是他帮我在学编程这条路上扫清了很多障碍，也细心教导了我很多知识。多说无益，加油学习！
+      </div>
+      <div style="margin-top: 5px; margin-bottom: 5px; text-align: center">
+        [目标]
+      </div>
+      <div>
+        <p>终身学习</p>
+        <p>坚持运动（已进行近300天）</p>
+        <p>目前学习内容：JavaScripts</p>
+        <p>已完成学习内容：Html/CSS</p>
+        <p>加油！</p>
+      </div>
+      <div class="flex column ct">
+        <label
+          style="text-align: center; margin: 50px; font-size: 30px"
+          for="text"
+          >点击下方按钮为你刷火箭</label
+        >
+        <button
+          style="margin-bottom: 100px; height: 100px; width: 100px"
+          type="button"
+          id="dz"
+          onclick="dz()"
+        >
+          0
+        </button>
+      </div>
+    </section>
+
+    <footer class="flex" style="justify-content: center">
+      <p style="margin-right: 15px">版权声明</p>
+      <p>备案号</p>
+    </footer>
   </body>
 </html>
